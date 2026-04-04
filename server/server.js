@@ -17,7 +17,7 @@ app.get('/movies', function (req, res) {
   res.json(Object.values(movieModel));
   }
   catch{
-    res.sendStatus(404)
+    res.sendStatus(404).send("Movie not found");
   }
 });
 
@@ -25,7 +25,9 @@ app.get('/movies', function (req, res) {
 
 // Configure a 'get' endpoint for a specific movie
 app.get('/movies/:imdbID', function (req, res) {
-  const movie = movieModel[req.params.imdbID];
+  const id = req.params.imdbID;
+  const movie = movieModel[id];
+
   if (movie) {
     res.json(movie);
   } else {
@@ -33,10 +35,21 @@ app.get('/movies/:imdbID', function (req, res) {
   }
 });
 
-/* Task 3.1 and 3.2.
-   - Add a new PUT endpoint
-   - Check whether the movie sent by the client already exists 
-     and continue as described in the assignment */
+
+
+app.put('/movies/:imdbID', function (req, res) {
+  const id = req.params.imdbID;
+  const movie = req.body;
+
+  if (movieModel[id]) {
+    movieModel[id] = movie;
+    res.sendStatus(200);
+  } else {
+    movieModel[id] = movie;
+    res.status(201).json(movie);
+  }
+});
+
 
 app.listen(3000)
 

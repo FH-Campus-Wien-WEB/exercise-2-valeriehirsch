@@ -1,4 +1,5 @@
 function setMovie(movie) {
+  document.getElementById('posterImg').src = movie.Poster;
   for (const element of document.forms[0].elements) {
     const name = element.id;
     const value = movie[name];
@@ -59,22 +60,30 @@ function getMovie() {
 }
 
 function putMovie() {
-  /* Task 3.3. 
-    - Get the movie data using getMovie()
-    - Configure the XMLHttpRequest to make a PUT to /movies/:imdbID
-    - Set the 'Content-Type' appropriately for JSON data
-    - Configure the function below as the onload event handler
-    - Send the movie data as JSON
-  */
+  const movie = getMovie();
+
+if (movie.Metascore < 0 || movie.Metascore > 100) {
+    alert("Metascore must be between 0 and 100.");
+    return;
+  }
+
+  if (movie.imdbRating < 0 || movie.imdbRating > 10) {
+    alert("IMDB Rating must be between 0 and 10.");
+    return;
+  }
 
   const xhr = new XMLHttpRequest();
   xhr.onload = function () {
     if (xhr.status == 200 || xhr.status === 204) {
-      location.href = "index.html";
+      location.href = 'index.html';
     } else {
       alert("Saving of movie data failed. Status code was " + xhr.status);
     }
   };
+
+  xhr.open("PUT", "/movies/" + movie.imdbID);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(movie));
 }
 
 /** Loading and setting the movie data for the movie with the passed imdbID */

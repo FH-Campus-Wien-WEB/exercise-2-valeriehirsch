@@ -16,6 +16,7 @@ window.onload = function () {
               movies.forEach(movie => {
               const movieDiv = document.createElement('div');
               movieDiv.className = 'movie';
+              movieDiv.id = movie.imdbID;
 
               const poster = document.createElement('img');
               poster.src = movie.Poster;
@@ -52,15 +53,23 @@ window.onload = function () {
                   <p>${metaHTML}</p>
                   <p>Plot: ${movie.Plot}</p>
 
-                  <div class="movie-footer">
-                  <button class="edit-btn" onclick="window.location.href='/movies/${movie.imdbID}'">Edit</button>
-                  </div>
               `;
+
+              const editBtn = document.createElement('button');
+              editBtn.textContent = 'Edit';
+              editBtn.className = 'edit-btn';
+              editBtn.onclick = function() {
+                location.href = 'edit.html?imdbID=' + movie.imdbID;
+              };
+              infoDiv.appendChild(editBtn);
+
+
               movieDiv.appendChild(infoDiv);
 
               
               container.appendChild(movieDiv);
 
+              
 
         });
     })

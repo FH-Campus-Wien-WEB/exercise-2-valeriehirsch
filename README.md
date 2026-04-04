@@ -300,3 +300,34 @@ Some code is already there, but you will need to find the missing pieces and dec
 ---
 
 **Congratulations on finishing the second exercise!** Make sure to test your application thoroughly and be ready to present your work in the next meeting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+fetch('/movies/tt9999999', {
+  method: 'PUT',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    imdbID: 'tt9999999',
+    Title: 'Test Movie',
+    Released: '2024-01-01',
+    Runtime: 120,
+    Genres: ['Comedy'],
+    Directors: ['Test Director'],
+    Writers: ['Test Writer'],
+    Actors: ['Test Actor'],
+    Plot: 'Test plot.',
+    Poster: 'https://via.placeholder.com/300',
+    Metascore: 70,
+    imdbRating: 7.0
+  })
+})
