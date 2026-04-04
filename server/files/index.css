@@ -27,6 +27,7 @@ body {
             gap: 15px;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
             transition: background-color 0.3s ease;
+            position: relative;
         }
 
         .movie:hover {
@@ -105,3 +106,30 @@ body {
                 width: 100%;  
             }
         }
+
+        .movie-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+     position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.edit-btn {
+    padding: 6px 14px;
+    background-color: #d64149;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: bold;
+    
+    transition: background-color 0.2s ease;
+
+}
+
+.edit-btn:hover {
+    background-color: #a9343a;
+}

@@ -1,2 +1,74 @@
-/* Task 1.1. Add your movie data here 
-   and export it so it's available in server.js */
+const movies = {
+  tt0317198: {
+   "imdbID": "tt0317198",   
+    "Title": "Bridget Jones: The Edge of Reason",
+    "Released": "2004-11-19",
+    "Runtime": 108,
+    "Genres": ["Comedy", " Drama", " Romance"],
+    "Directors": ["Beeban Kidron"],
+    "Writers": ["Helen Fielding", " Andrew Davies", " Richard Curtis"],
+    "Actors": ["Renée Zellweger", " Colin Firth", " Hugh Grant"],
+    "Plot": "After finding love, Bridget Jones questions if she really has everything she'd ever dreamed of having.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTU1MTM1ZTUtMzcxNy00OTRiLTllNzItN2U3MGQ4YTQzYWE4XkEyXkFqcGc@._V1_SX300.jpg",
+    "Metascore": 44,
+    "imdbRating": 6
+  },
+  tt32063050: {
+   "imdbID": "tt32063050",  
+    "Title": "Bridget Jones: Mad About the Boy",
+    "Released": "2025-02-13",
+    "Runtime": 124,
+    "Genres": ["Comedy", " Drama", " Romance"],
+    "Directors": ["Michael Morris"],
+    "Writers": ["Helen Fielding", " Dan Mazer", " Abi Morgan"],
+    "Actors": ["Renée Zellweger", " Chiwetel Ejiofor", " Leo Woodall"],
+    "Plot": "After jumping back into the dating pool, single mother Bridget Jones finds herself caught between a younger man and her son's science teacher.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMDdlY2Y2ZWEtYjk4Mi00Yjg3LWFlM2MtMWI1ZjVlNGQ5NTNjXkEyXkFqcGc@._V1_SX300.jpg",
+    "Metascore": 72,
+    "imdbRating": 6.5
+  },
+  tt0314331: {
+   "imdbID": "tt0314331",  
+    "Title": "Love Actually",
+    "Released": "2003-11-14",
+    "Runtime": 135,
+    "Genres": ["Comedy", " Drama", " Romance"],
+    "Directors": ["Richard Curtis"],
+    "Writers": ["Richard Curtis"],
+    "Actors": ["Hugh Grant", " Martine McCutcheon", " Liam Neeson"],
+    "Plot": "Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYWRlZjcwYTgtYWJkOS00MGYwLTk3Y2ItNmU4NTg5Nzg2YTQ2XkEyXkFqcGc@._V1_SX300.jpg",
+    "Metascore": 55,
+    "imdbRating": 7.5
+  },
+  tt0795421: {
+   "imdbID": "tt0795421",  
+    "Title": "Mamma Mia!",
+    "Released": "2008-07-18",
+    "Runtime": 108,
+    "Genres": ["Comedy", " Musical", " Romance"],
+    "Directors": ["Phyllida Lloyd"],
+    "Writers": ["Catherine Johnson", " Melvin Frank", " Sheldon Keller"],
+    "Actors": ["Meryl Streep", " Pierce Brosnan", " Amanda Seyfried"],
+    "Plot": "Independent hotelier Donna is preparing for her daughter's wedding with the help of two old friends. Meanwhile, spirited bride-to-be Sophie invites three men from her mother's past in order to discern which is her biological father.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTA2MDU0MjM0MzReQTJeQWpwZ15BbWU3MDYwNzgwNzE@._V1_SX300.jpg",
+    "Metascore": 51,
+    "imdbRating": 6.5
+  },
+  tt6911608: {
+    "imdbID": "tt6911608",   
+    "Title": "Mamma Mia! Here We Go Again",
+    "Released": "2018-07-20",
+    "Runtime": 114,
+    "Genres": ["Comedy", " Musical", " Romance"],
+    "Directors": ["Ol Parker"],
+    "Writers": ["Ol Parker", " Richard Curtis", " Catherine Johnson"],
+    "Actors": ["Lily James", " Amanda Seyfried", " Meryl Streep"],
+    "Plot": "Five years after the events of Mamma Mia! (2008), Sophie prepares for the grand reopening of the Hotel Bella Donna as she learns more about her mother's past.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjEwMTM3OTI1NV5BMl5BanBnXkFtZTgwNDk5NTY0NTM@._V1_SX300.jpg",
+    "Metascore": 60,
+    "imdbRating": 6.6
+  }
+};
+
+module.exports = movies;

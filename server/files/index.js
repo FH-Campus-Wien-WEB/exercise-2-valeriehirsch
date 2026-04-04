@@ -4,7 +4,7 @@ window.onload = function () {
     const bodyElement = document.querySelector("body");
     if (xhr.status == 200) {
       const movies = JSON.parse(xhr.responseText);
-      for (const movie of movies) {
+    
         /* Task 1.3. Add your code from exercise 1 here 
            and include a non-functional 'Edit' button
            to pass this test */
@@ -51,6 +51,10 @@ window.onload = function () {
                   <p> ${imdbHTML}</p>
                   <p>${metaHTML}</p>
                   <p>Plot: ${movie.Plot}</p>
+
+                  <div class="movie-footer">
+                  <button class="edit-btn" onclick="window.location.href='/movies/${movie.imdbID}'">Edit</button>
+                  </div>
               `;
               movieDiv.appendChild(infoDiv);
 
@@ -64,7 +68,7 @@ window.onload = function () {
 
 
 
-          }
+          
 
 
     } else {
