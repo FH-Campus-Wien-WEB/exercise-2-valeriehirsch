@@ -42,6 +42,7 @@ window.onload = function () {
               const metaHTML = `<span class="rating ${metaClass}">Metascore: ${movie.Metascore}</span>`;
 
               const infoDiv = document.createElement('div');
+              /** 
               infoDiv.innerHTML = `
                   <h2>${movie.Title} (${movie.Released})</h2>
                   <p>Runtime: ${movie.Runtime} min</p>
@@ -54,6 +55,45 @@ window.onload = function () {
                   <p>Plot: ${movie.Plot}</p>
 
               `;
+              */
+
+              infoDiv.innerHTML = "";
+
+              const title = document.createElement("h2");
+              title.textContent = `${movie.Title} (${movie.Released})`;
+              infoDiv.appendChild(title);
+
+              const runtime = document.createElement("p");
+              runtime.textContent = `Runtime: ${movie.Runtime} min`;
+              infoDiv.appendChild(runtime);
+
+              const genres = document.createElement("p");
+              genres.textContent = `Genres: ${movie.Genres.join(", ")}`;
+              infoDiv.appendChild(genres);
+
+              const directors = document.createElement("p");
+              directors.textContent = `Directors: ${movie.Directors.join(", ")}`;
+              infoDiv.appendChild(directors);
+
+              const writers = document.createElement("p");
+              writers.textContent = `Writers: ${movie.Writers.join(", ")}`;
+              infoDiv.appendChild(writers);
+
+              const actors = document.createElement("p");
+              actors.textContent = `Actors: ${movie.Actors.join(", ")}`;
+              infoDiv.appendChild(actors);
+
+              const imdb = document.createElement("p");
+              imdb.innerHTML = imdbHTML;
+              infoDiv.appendChild(imdb);
+
+              const meta = document.createElement("p");
+              meta.innerHTML = metaHTML;
+              infoDiv.appendChild(meta);
+
+              const plot = document.createElement("p");
+              plot.textContent = `Plot: ${movie.Plot}`;
+              infoDiv.appendChild(plot);
 
               const editBtn = document.createElement('button');
               editBtn.textContent = 'Edit';
